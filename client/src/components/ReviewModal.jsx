@@ -13,7 +13,7 @@ class ReviewModal extends React.Component {
       <div className={styles.modalReviewBackground} onClick={() => this.props.toggleReviewModalOff()}>
         <div className={styles.modalReviewContainer}>
           <div className={styles.gridReviewContainer}>
-          <CarouselItem review={this.props.review} color={this.props.color}/>
+          <CarouselItem review={this.props.review} color={this.props.color} reviewModal={true}/>
           </div>
         </div>
       </div>
