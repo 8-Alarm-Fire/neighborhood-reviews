@@ -1,8 +1,9 @@
 const path = require('path');
+const CompressionPlugin = require("compression-webpack-plugin");
 var SRC_DIR = path.join(__dirname, 'client/src/index.jsx');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: SRC_DIR,
   output: {
     filename: 'bundle.js',
@@ -39,4 +40,5 @@ module.exports = {
   resolve: {
     extensions: [".js", ".json", ".jsx", ".css"],
   },
+  plugins: [new CompressionPlugin()],
 };
